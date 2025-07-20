@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical Symptom Checker</title>
+    <link rel="stylesheet" href="stylr.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🏥 Medical Symptom Checker</h1>
+        <p>AI-powered symptom analysis using Google Gemini</p>
+      </div>
+
+      <div class="main-content">
+        <form id="symptomForm">
+          <div class="form-group">
+            <label for="symptoms">Describe Your Symptoms</label>
+            <textarea
+              id="symptoms"
+              name="symptoms"
+              placeholder="Please describe your symptoms in detail. Include duration, severity, and any relevant information..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="age">Age (Optional)</label>
+            <input type="text" id="age" placeholder="e.g., 30" name="age" />
+          </div>
+
+          <div class="form-group">
+            <label for="gender">Gender (Optional)</label>
+            <input
+              type="text"
+              id="gender"
+              placeholder="e.g., Male, Female, Other"
+              name="gender"
+            />
+          </div>
+
+          <button type="submit" class="btn" id="analyzeBtn">Submit</button>
+        </form>
+
+        <div class="results" id="results">
+          <div class="result-section">
+            <h3>🔬 Possible Conditions</h3>
+            <p id="conditions"></p>
+          </div>
+
+          <div class="result-section">
+            <h3>💊 Medication Suggestions</h3>
+            <p id="medications"></p>
+          </div>
+
+          <div class="result-section">
+            <h3>🩺 Recommendations</h3>
+            <p id="recommendations"></p>
+          </div>
+        </div>
+
+        <div class="disclaimer">
+          <h4>Final Output</h4>
+          <p id="outputBox"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/script.js"></script>
+</html>
